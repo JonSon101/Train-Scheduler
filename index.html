@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Train Scheduler</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  	<div class="container">
+		<div class="jumbotron">
+	  		<h1 class="display-3">Anytime is Train Time</h1>
+	  		<p class="lead">Choo Choo! Chee Chee!</p>
+		</div>
+		<div class="panel panel-success">
+    		<div class="panel-heading">Current Train Schedule</div>
+    		<div class="panel-body">
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">Train Name</th>
+				      <th scope="col">Destination</th>
+				      <th scope="col">Frequency (min)</th>
+				      <th scope="col">Next Arrival</th>
+				      <th scope="col">Minutes Away</th>
+				    </tr>
+				  </thead>
+				  <tbody id="trainDetails">
+				  </tbody>
+				</table>
+    		</div>
+  		</div>
+		<div class="panel panel-success">
+			<div class="panel-heading">Add Train</div>
+			<div class="panel-body">
+				<form id="trainForm">
+				  <div class="form-group">
+				    <label for="trainName">Train Name</label>
+				    <input type="text" class="form-control" id="trainName" placeholder="Enter your train name...">
+				  </div>
+				  <div class="form-group">
+				    <label for="destination">Destination</label>
+				    <input type="text" class="form-control" id="destination" placeholder="e.g. Seattle">
+				  </div>
+				  <div class="form-group">
+				    <label for="firstTrainTime">First Train Time</label>
+				    <input type="text" class="form-control" id="firstTrainTime" placeholder="hh:mm (military time)">
+				  </div>
+				  <div class="form-group">
+				    <label for="frequency">Frequency</label>
+				    <input type="text" class="form-control" id="frequency" placeholder="e.g. 17 (min)">
+				  </div>
+				  <button type="submit" id="addEmployee" class="btn btn-success">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+
+  </body>
+</html>
